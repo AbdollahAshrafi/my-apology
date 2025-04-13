@@ -274,37 +274,109 @@ h1 i {
     }
     
     .message-box {
-        padding: 20px;
-        margin: 10px;
+        padding: 15px;
+        margin: 5px;
         max-width: 95%;
+        transform: none;
     }
 
     h1 {
-        font-size: 2em;
-        /* flex-direction: column; */
-        gap: 10px;
+        font-size: 1.5em;
+        margin-bottom: 15px;
+        gap: 5px;
     }
 
     .apology-text {
-        font-size: 1.1em;
-        line-height: 1.6;
+        font-size: 1em;
+        line-height: 1.4;
+        margin-bottom: 15px;
     }
 
     .question p {
-        font-size: 1.2em;
-        margin-bottom: 20px;
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        line-height: 1.4;
     }
 
     .option-btn {
-        padding: 15px 20px;
-        font-size: 1em;
+        padding: 10px 15px;
+        font-size: 0.9em;
         width: 100%;
-        margin: 5px 0;
+        margin: 3px 0;
     }
 
     .options {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+    }
+
+    .strawberry {
+        width: 80px;
+        height: 80px;
+        margin: 10px auto;
+    }
+
+    .strawberry::before {
+        top: -15px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .strawberry::after {
+        top: -25px;
+        width: 8px;
+        height: 25px;
+    }
+
+    .strawberry .seed {
+        width: 3px;
+        height: 3px;
+    }
+
+    .container {
+        padding: 10px;
+        min-height: 100vh;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .message-content {
+        margin-bottom: 15px;
+    }
+
+    .questions-container {
+        margin-top: 10px;
+    }
+
+    .strawberry-emoji {
+        font-size: 0.9em;
+        margin: 0 3px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.3em;
+    }
+
+    .apology-text {
+        font-size: 0.9em;
+    }
+
+    .question p {
+        font-size: 1em;
+    }
+
+    .option-btn {
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+
+    .strawberry {
+        width: 60px;
+        height: 60px;
     }
 }
 
