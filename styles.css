@@ -269,6 +269,10 @@ h1 i {
 
 /* Enhanced mobile responsiveness */
 @media (max-width: 768px) {
+    h1 .strawberry-emoji:first-child {
+        display: none;
+    }
+    
     .message-box {
         padding: 20px;
         margin: 10px;
