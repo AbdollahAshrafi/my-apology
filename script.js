@@ -75,8 +75,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
             currentQuestion.classList.remove('active');
             nextQuestion.classList.add('active');
+            // dispatch event and include the question id
+            currentQuestion.dispatchEvent(new CustomEvent('question-change', { bubbles: true, detail: { questionId: nextQuestionId } }));
         });
     });
+
+    questions.forEach(question => {
+        question.addEventListener('question-change', function(event) {
+            let currentQuestion = document.getElementById(event.detail.questionId);
+            const centralStrawberry = document.querySelector('.central-strawberry')
+            console.log(currentQuestion)
+            if(currentQuestion.classList.contains('strawberry-step')){
+                centralStrawberry.classList.add('active');
+            }
+            else {
+                centralStrawberry.classList.remove("active")
+            }
+        });
+    });
+    
 
     restartButton.addEventListener('click', function() {
         questions.forEach(question => {

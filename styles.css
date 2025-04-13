@@ -36,7 +36,7 @@ body {
     position: relative;
 }
 
-.stars, .twinkling, .clouds {
+.stars, .twinkling {
     position: fixed;
     top: 0;
     left: 0;
@@ -67,18 +67,6 @@ body {
     background: transparent url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png') repeat;
     animation: move-twink-back 200s linear infinite;
     z-index: 2;
-}
-
-.clouds {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds.png') repeat;
-    animation: move-clouds-back 200s linear infinite;
-    z-index: 3;
-    opacity: 0.3;
 }
 
 .container {
@@ -156,6 +144,12 @@ h1 i {
 }
 
 .central-strawberry {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.central-strawberry.active {
     text-align: center;
     margin: 20px 0;
     display: flex;
