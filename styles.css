@@ -84,25 +84,25 @@ body {
 }
 
 .message-box {
-    background: rgba(56, 0, 1, 0.9);
+    background: rgba(56, 0, 1, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 30px;
     max-width: 600px;
-    width: 100%;
-    box-shadow: 0 0 30px rgba(255, 107, 107, 0.3);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 107, 107, 0.2);
-    transform: translateY(20px);
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
-    direction: rtl;
-    text-align: right;
-    overflow: hidden;
-    touch-action: none;
+    width: 90%;
     margin: auto;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.3);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    direction: rtl;
+    text-align: right;
+    color: #fff;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 h1 {
@@ -137,6 +137,30 @@ h1 i {
     line-height: 1.6;
     margin-bottom: 20px;
     text-align: right;
+}
+
+.central-strawberry {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.strawberry-svg {
+    width: 120px;
+    height: 120px;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.5));
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
 }
 
 .strawberry {
@@ -202,18 +226,6 @@ h1 i {
     100% {
         transform: scale(2);
         opacity: 0;
-    }
-}
-
-@keyframes float {
-    0%, 100% { 
-        transform: translateY(0) rotate(0deg);
-    }
-    25% { 
-        transform: translateY(-10px) rotate(2deg);
-    }
-    75% { 
-        transform: translateY(10px) rotate(-2deg);
     }
 }
 
@@ -289,15 +301,13 @@ h1 i {
     }
 
     .message-box {
-        padding: 15px;
-        margin: 0;
-        max-width: 95%;
-        transform: none;
-        position: relative;
-        top: auto;
-        transform: none;
+        width: 95%;
+        padding: 20px;
+        margin: 10px auto;
         max-height: 90vh;
         overflow-y: auto;
+        transform: none;
+        top: auto;
     }
 
     h1 {
@@ -330,10 +340,9 @@ h1 i {
         gap: 8px;
     }
 
-    .strawberry {
+    .strawberry-svg {
         width: 80px;
         height: 80px;
-        margin: 10px auto;
     }
 
     .strawberry::before {
@@ -365,6 +374,11 @@ h1 i {
         font-size: 0.9em;
         margin: 0 3px;
     }
+
+    .central-strawberry {
+        font-size: 3em;
+        margin: 15px 0;
+    }
 }
 
 /* Extra small devices */
@@ -386,9 +400,14 @@ h1 i {
         font-size: 0.85em;
     }
 
-    .strawberry {
+    .strawberry-svg {
         width: 60px;
         height: 60px;
+    }
+
+    .central-strawberry {
+        font-size: 2.5em;
+        margin: 10px 0;
     }
 }
 

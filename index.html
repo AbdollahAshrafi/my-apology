@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,9 @@
             <h1><span class="strawberry-emoji">🍓</span> خانم کوچولوم <span class="strawberry-emoji">🍓</span></h1>
             <div class="message-content">
                 <p class="apology-text">خیلی خیلیی ببخشید که دیشب دوباره خواب رفتم یه دنیا دوستت دارم سنا جانم و نمیخوام هیچوقت حس کنی برام مهم نیستی چون مهم ترینی.</p>
-                <div class="strawberry"></div>
+                <div class="central-strawberry">
+                    <img src="strawberry.svg" alt="توت فرنگی" class="strawberry-svg">
+                </div>
             </div>
             
             <div class="questions-container">
@@ -40,25 +42,25 @@
                 </div>
                 
                 <div class="question" id="q2">
-                    <p>Do you know how much I love you?</p>
+                    <p>میدونی چقدر دوستت دارم؟</p>
                     <div class="options">
-                        <button class="option-btn" data-next="q3"><span class="strawberry-emoji">🍓</span> Yes, but tell me again!</button>
-                        <button class="option-btn" data-next="q3"><span class="strawberry-emoji">🍓</span> I want to hear it!</button>
+                        <button class="option-btn" data-next="q3"><span class="strawberry-emoji">🍓</span>آره، ولی بازم بگو!</button>
+                        <button class="option-btn" data-next="q3"><span class="strawberry-emoji">🍓</span>میخوام بشنوم!</button>
                     </div>
                 </div>
                 
                 <div class="question" id="q3">
-                    <p>Will you accept this virtual strawberry as a token of my love?</p>
+                    <p>این توت فرنگی مجازی رو به عنوان نشانه عشقم میپذیری؟</p>
                     <div class="options">
-                        <button class="option-btn" data-next="final"><span class="strawberry-emoji">🍓</span> Yes, with all my heart!</button>
-                        <button class="option-btn" data-next="final"><span class="strawberry-emoji">🍓</span> I'd love that!</button>
+                        <button class="option-btn" data-next="final"><span class="strawberry-emoji">🍓</span>آره، با تمام وجودم!</button>
+                        <button class="option-btn" data-next="final"><span class="strawberry-emoji">🍓</span>خیلی دوست دارم!</button>
                     </div>
                 </div>
                 
                 <div class="question" id="final">
-                    <p>Thank you for being the most amazing person in my life. I promise to always say good night to you, even if I'm half asleep!</p>
+                    <p>ممنون که تو بهترین آدم زندگی منی. قول میدم همیشه شب بخیر بگم، حتی اگه نصفه خواب باشم!</p>
                     <div class="options">
-                        <button class="option-btn" id="restart"><i class="fas fa-redo"></i> Read it again!</button>
+                        <button class="option-btn" id="restart"><i class="fas fa-redo"></i> دوباره بخون!</button>
                     </div>
                 </div>
             </div>
