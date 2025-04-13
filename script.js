@@ -99,6 +99,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 centralImage.src = 'images/vitamene-c.png';
             }
 
+            else if(currentQuestion.classList.contains("chocolate-milk-step")) {
+                centralImage.src = 'images/chocolate-milk.png';
+            }
+
+            else if(currentQuestion.classList.contains("wafeup-step")) {
+                centralImage.src = 'images/wafeup.png';
+            }
+
             else {
                 centralStrawberry.classList.remove("active")
             };
