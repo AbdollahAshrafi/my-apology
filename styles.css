@@ -84,9 +84,9 @@ body {
 }
 
 .message-box {
-    background: rgba(56, 0, 1, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(56, 0, 1, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-radius: 20px;
     padding: 30px;
     max-width: 600px;
