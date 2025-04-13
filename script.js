@@ -84,14 +84,25 @@ document.addEventListener('DOMContentLoaded', function() {
         question.addEventListener('question-change', function(event) {
             let currentQuestion = document.getElementById(event.detail.questionId);
             const centralStrawberry = document.querySelector('.central-strawberry')
-            console.log(currentQuestion)
+            const centralImage = centralStrawberry.querySelector('img')
+
+
             if(currentQuestion.classList.contains('strawberry-step')){
-                centralStrawberry.classList.add('active');
+                centralStrawberry.classList.add("active")
+                centralImage.src = "images/strawberry.svg"
             }
+            else if(currentQuestion.classList.contains('twix-step')){
+                centralImage.src = 'images/twix.png';
+            }
+
+            else if(currentQuestion.classList.contains("vitamene-step")) {
+                centralImage.src = 'images/vitamene-c.png';
+            }
+
             else {
                 centralStrawberry.classList.remove("active")
-            }
-        });
+            };
+        })
     });
     
 
