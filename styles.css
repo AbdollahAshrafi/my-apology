@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Vazirmatn', 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;
     background: linear-gradient(to bottom, #000033, #000000);
     color: #fff;
     overflow: hidden;
@@ -48,7 +48,7 @@ body {
 }
 
 .stars {
-    background: transparent;
+    background: #000 url('https://www.transparenttextures.com/patterns/starry-night.png') repeat;
     z-index: 0;
 }
 
@@ -110,7 +110,6 @@ h1 {
     justify-content: center;
     gap: 15px;
     direction: rtl;
-    font-weight: 700;
 }
 
 h1 i {
@@ -129,10 +128,9 @@ h1 i {
 
 .apology-text {
     font-size: 1.2em;
-    line-height: 1.8;
+    line-height: 1.6;
     margin-bottom: 20px;
     text-align: right;
-    font-weight: 400;
 }
 
 .strawberry {
@@ -228,7 +226,6 @@ h1 i {
     margin-bottom: 20px;
     color: #ff6b6b;
     text-align: right;
-    font-weight: 500;
 }
 
 .options {
@@ -254,7 +251,6 @@ h1 i {
     gap: 8px;
     box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
     direction: rtl;
-    font-weight: 500;
 }
 
 .option-btn:hover {
