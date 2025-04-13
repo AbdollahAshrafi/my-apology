@@ -48,7 +48,7 @@ body {
 }
 
 .stars {
-    background: #000 url('https://www.transparenttextures.com/patterns/starry-night.png') repeat;
+    background: transparent;
     z-index: 0;
 }
 
