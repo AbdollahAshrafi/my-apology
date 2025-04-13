@@ -72,6 +72,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    height: 100vh;
     padding: 20px;
     direction: rtl;
     width: 100%;
@@ -79,6 +80,7 @@ body {
     overflow: hidden;
     touch-action: none;
     background: transparent;
+    box-sizing: border-box;
 }
 
 .message-box {
@@ -97,6 +99,10 @@ body {
     text-align: right;
     overflow: hidden;
     touch-action: none;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 h1 {
@@ -273,11 +279,25 @@ h1 i {
         display: none;
     }
     
+    .container {
+        padding: 10px;
+        height: 100vh;
+        min-height: -webkit-fill-available;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .message-box {
         padding: 15px;
-        margin: 5px;
+        margin: 0;
         max-width: 95%;
         transform: none;
+        position: relative;
+        top: auto;
+        transform: none;
+        max-height: 90vh;
+        overflow-y: auto;
     }
 
     h1 {
@@ -331,14 +351,6 @@ h1 i {
     .strawberry .seed {
         width: 3px;
         height: 3px;
-    }
-
-    .container {
-        padding: 10px;
-        min-height: 100vh;
-        height: 100vh;
-        display: flex;
-        align-items: center;
     }
 
     .message-content {
