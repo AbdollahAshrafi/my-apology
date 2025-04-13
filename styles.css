@@ -352,6 +352,7 @@ h1 i {
 
     .strawberry-svg {
         width: auto;
+        max-width: 180px;
         max-height: 120px;
     }
 
@@ -410,10 +411,10 @@ h1 i {
         font-size: 0.85em;
     }
 
-    .strawberry-svg {
+    /* .strawberry-svg {
         width: 60px;
         height: 60px;
-    }
+    } */
 
     .central-strawberry {
         font-size: 2.5em;
