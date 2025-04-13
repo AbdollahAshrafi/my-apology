@@ -281,7 +281,7 @@ h1 i {
 
     h1 {
         font-size: 2em;
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 10px;
     }
 
