@@ -253,8 +253,12 @@ h1 i {
     font-size: 1.3em;
     margin-bottom: 20px;
     color: #ff6b6b;
+}
+
+.text-right {
     text-align: right;
 }
+
 
 .options {
     display: flex;
