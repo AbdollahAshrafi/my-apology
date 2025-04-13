@@ -21,6 +21,7 @@ body {
     overflow: hidden;
     height: 100vh;
     position: relative;
+    direction: rtl;
 }
 
 .stars, .twinkling, .clouds {
@@ -58,16 +59,23 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
+    direction: rtl;
 }
 
 .message-box {
-    background: rgba(56, 0, 1, 0.8);
+    background: rgba(56, 0, 1, 0.9);
     border-radius: 20px;
     padding: 30px;
     max-width: 600px;
     width: 100%;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    direction: rtl;
+    text-align: right;
 }
 
 h1 {
@@ -76,10 +84,24 @@ h1 {
     color: #ff6b6b;
     font-size: 2.5em;
     text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    direction: rtl;
+}
+
+h1 i {
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
 }
 
 .message-content {
-    text-align: center;
+    text-align: right;
     margin-bottom: 30px;
 }
 
@@ -87,6 +109,7 @@ h1 {
     font-size: 1.2em;
     line-height: 1.6;
     margin-bottom: 20px;
+    text-align: right;
 }
 
 .strawberry {
@@ -181,6 +204,7 @@ h1 {
     font-size: 1.3em;
     margin-bottom: 20px;
     color: #ff6b6b;
+    text-align: right;
 }
 
 .options {
@@ -188,22 +212,33 @@ h1 {
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+    direction: rtl;
 }
 
 .option-btn {
-    background: #ff6b6b;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    direction: rtl;
 }
 
 .option-btn:hover {
-    background: #ff8e8e;
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.option-btn:active {
+    transform: translateY(1px);
 }
 
 @keyframes fadeIn {
@@ -221,18 +256,22 @@ h1 {
 
     h1 {
         font-size: 2em;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .apology-text {
         font-size: 1.1em;
+        line-height: 1.6;
     }
 
     .question p {
         font-size: 1.2em;
+        margin-bottom: 20px;
     }
 
     .option-btn {
-        padding: 12px 24px;
+        padding: 15px 20px;
         font-size: 1em;
         width: 100%;
         margin: 5px 0;
@@ -266,35 +305,107 @@ h1 {
     }
 }
 
-/* Add shooting stars */
+/* Enhanced shooting stars */
 .shooting-star {
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
     background: white;
     border-radius: 50%;
-    animation: shoot 3s infinite;
+    animation: shoot 4s cubic-bezier(0.1, 0, 0.9, 1) forwards;
+    box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
 }
 
 .shooting-star::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100px;
-    height: 1px;
-    background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.8));
+    right: -200px;
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(to left, 
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 10%,
+        rgba(255, 255, 255, 0.8) 30%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0.8) 70%,
+        rgba(255, 255, 255, 0.3) 90%,
+        rgba(255, 255, 255, 0) 100%
+    );
     transform-origin: 0 0;
-    transform: rotate(45deg);
+    filter: blur(1.5px);
 }
 
 @keyframes shoot {
     0% {
-        transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0) rotate(-45deg) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
         opacity: 1;
     }
     100% {
-        transform: translateX(100vw) translateY(100vh);
+        transform: translateX(-100vw) translateY(100vh) rotate(-45deg) scale(0.5);
         opacity: 0;
+    }
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #000033, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease-out;
+}
+
+.loading-content {
+    text-align: center;
+    color: white;
+}
+
+.strawberry-loader {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    background: #ff6b6b;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: relative;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.strawberry-loader::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #2e7d32;
+    border-radius: 50%;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 } 
