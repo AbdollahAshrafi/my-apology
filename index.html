@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Apology to You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+    
+    <div class="container">
+        <div class="message-box">
+            <h1>My Dearest Love</h1>
+            <div class="message-content">
+                <p class="apology-text">I'm so sorry I fell asleep without saying good night to you last night. You mean the world to me, and I never want to make you feel neglected.</p>
+                <div class="strawberry"></div>
+            </div>
+            
+            <div class="questions-container">
+                <div class="question active" id="q1">
+                    <p>Can you forgive me for falling asleep without saying good night?</p>
+                    <div class="options">
+                        <button class="option-btn" data-next="q2">Yes, of course!</button>
+                        <button class="option-btn" data-next="q2">I'll think about it...</button>
+                    </div>
+                </div>
+                
+                <div class="question" id="q2">
+                    <p>Do you know how much I love you?</p>
+                    <div class="options">
+                        <button class="option-btn" data-next="q3">Yes, but tell me again!</button>
+                        <button class="option-btn" data-next="q3">I want to hear it!</button>
+                    </div>
+                </div>
+                
+                <div class="question" id="q3">
+                    <p>Will you accept this virtual strawberry as a token of my love?</p>
+                    <div class="options">
+                        <button class="option-btn" data-next="final">Yes, with all my heart!</button>
+                        <button class="option-btn" data-next="final">I'd love that!</button>
+                    </div>
+                </div>
+                
+                <div class="question" id="final">
+                    <p>Thank you for being the most amazing person in my life. I promise to always say good night to you, even if I'm half asleep!</p>
+                    <div class="options">
+                        <button class="option-btn" id="restart">Read it again!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
